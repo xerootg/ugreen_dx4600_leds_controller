@@ -1,6 +1,6 @@
 ## prereqs
 ```bash
-yay -Suy dkms
+yay -Suy dkms libi2c-dev i2c-tools dmidecode 
 ```
 
 # build the kernel module
@@ -26,3 +26,13 @@ sudo ./ugreen_leds_cli -status 0
 ```
 
 if there's no errors (and possibly no output) then all went well
+
+# install the scripts
+```bash
+sudo cp scripts/ugreen-diskiomon /usr/bin/
+sudo chmod +x /usr/bin/ugreen-diskiomon
+sudo cp scripts/ugreen-netdevmon /usr/bin/
+sudo chmod +x /usr/bin/ugreen-netdevmon
+sudo cp scripts/ugreen-probe-leds /usr/bin/
+sudo chmod +x /usr/bin/ugreen-probe-leds
+```
