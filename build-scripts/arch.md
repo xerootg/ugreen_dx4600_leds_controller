@@ -35,4 +35,5 @@ sudo cp scripts/ugreen-netdevmon /usr/bin/
 sudo chmod +x /usr/bin/ugreen-netdevmon
 sudo cp scripts/ugreen-probe-leds /usr/bin/
 sudo chmod +x /usr/bin/ugreen-probe-leds
+sudo cp cli/ugreen_leds_cli /usr/bin
 ```
