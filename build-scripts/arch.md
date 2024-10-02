@@ -37,3 +37,14 @@ sudo cp scripts/ugreen-probe-leds /usr/bin/
 sudo chmod +x /usr/bin/ugreen-probe-leds
 sudo cp cli/ugreen_leds_cli /usr/bin
 ```
+
+# install the services
+```bash
+sudo cp scripts/ugreen-*.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now ugreen-diskiomon
+# my 10GbE interface is enp3s0, so i enable that
+sudo systemctl enable --now ugreen-netdevmon@enp3s0
+```
+
+Now go stare at your nas.
